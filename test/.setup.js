@@ -7,9 +7,17 @@ global.request = require('supertest');
 global.assert = require('assert');
 
 let app;
+let ctx;
+
 before(() => {
-  app = global.app = mm.app();
-  return app.ready();
+    app = global.app = mm.app();
+    return app.ready();
 });
+
+before(() => {
+    ctx = global.ctx = app.mockContext();
+    return ctx;
+});
+
 
 after(() => app.close());
