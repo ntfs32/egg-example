@@ -3,7 +3,7 @@
 module.exports = appInfo => {
   const config = {};
 
-    // should change to your own
+  // should change to your own
   config.keys = appInfo.name + '123456';
 
   config.mysql = {
@@ -21,11 +21,18 @@ module.exports = appInfo => {
         user: 'root', // 用户名
         password: 'point9*', // 密码
         database: 'transfer_parameter', // 数据库名
-      },
+      }
     },
     app: true, // 是否加载到 app 上，默认开启
     agent: false, // 是否加载到 agent 上，默认关闭
   };
+  config.kafka = {
+    default: {
+      host: '127.0.0.1', // 主机名
+      port: 2181, // 端口
+    },
+    app: true, // 默认附加到app
+    agent: true, // 默认附加到agent
+  };
   return config;
 };
-
