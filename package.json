@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "egg": "^0.11.0",
+    "egg-kafka": "^1.0.0",
     "egg-mysql": "^2.0.0"
   },
   "devDependencies": {

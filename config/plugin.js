@@ -10,8 +10,7 @@ exports.mysql = {
 };
 
 // 倒入本地开发的kafka插件
-const path = require('path');
 exports.kafka = {
   enable: true,
-  path: path.join(__dirname, '../lib/plugin/egg-kafka')
+  package: 'egg-kafka'
 };
