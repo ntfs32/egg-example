@@ -21,7 +21,7 @@ module.exports = appInfo => {
         user: 'root', // 用户名
         password: 'point9*', // 密码
         database: 'transfer_parameter', // 数据库名
-      },
+      }
     },
     app: true, // 是否加载到 app 上，默认开启
     agent: false, // 是否加载到 agent 上，默认关闭
@@ -35,6 +35,5 @@ module.exports = appInfo => {
     agent: true, // 是否加载到 agent 上，默认关闭
   };
 
-  config.middleware = [ 'auth' ];
   return config;
 };

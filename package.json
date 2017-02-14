@@ -7,7 +7,8 @@
     "egg": "^0.12.0",
     "egg-kafka": "^1.2.4",
     "gulp": "^3.9.1",
-    "gulp-jsdoc": "^0.1.5"
+    "gulp-jsdoc": "^0.1.5",
+    "egg-mysql": "^2.0.0"
   },
   "devDependencies": {
     "autod": "^2.7.1",

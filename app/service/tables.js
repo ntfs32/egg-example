@@ -13,7 +13,7 @@ module.exports = app => {
      * @param {any} ctx - ctx
      * @memberOf User
      */
-    constructor(ctx) {
+    constructor (ctx) {
       super(ctx);
       this.mysql = this.app.mysql.get('db2');
     }
@@ -25,7 +25,7 @@ module.exports = app => {
      * @return {GeneratorFunction} - 返回用户信息
      * @memberOf User
      */
-    * find(table_name, primary_key) {
+    * find (table_name, primary_key) {
       const user_info = yield this.mysql.get(table_name, { id: primary_key });
       return user_info;
     }
