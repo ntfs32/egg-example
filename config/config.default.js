@@ -3,8 +3,8 @@
 module.exports = appInfo => {
   const config = {};
 
-    // should change to your own
-  config.keys = appInfo.name + '123456';
+  // should change to your own
+  config.keys = appInfo.name + '5sdhsd&wdgegs452sfxgw121xagfwds==';
 
   config.mysql = {
     clients: {
@@ -26,6 +26,15 @@ module.exports = appInfo => {
     app: true, // 是否加载到 app 上，默认开启
     agent: false, // 是否加载到 agent 上，默认关闭
   };
+  config.kafka = {
+    client: {
+      host: 'localhost', // host
+      port: '3306', // 端口号
+    },
+    app: true, // 是否加载到 app 上，默认开启
+    agent: true, // 是否加载到 agent 上，默认关闭
+  };
+
+  config.middleware = [ 'auth' ];
   return config;
 };
-
